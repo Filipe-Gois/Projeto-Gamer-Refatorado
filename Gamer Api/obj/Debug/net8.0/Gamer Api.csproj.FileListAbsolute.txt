@@ -1,0 +1,33 @@
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\appsettings.json
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Gamer Api.exe
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Gamer Api.deps.json
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Gamer Api.runtimeconfig.json
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Gamer Api.dll
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Gamer Api.pdb
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.csproj.AssemblyReference.cache
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.AssemblyInfoInputs.cache
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.AssemblyInfo.cs
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.csproj.CoreCompileInputs.cache
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.sourcelink.json
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\staticwebassets\msbuild.Gamer Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\staticwebassets\msbuild.build.Gamer Api.props
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Gamer Api.props
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Gamer Api.props
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\scopedcss\bundle\Gamer Api.styles.css
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.csproj.Up2Date
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.dll
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\refint\Gamer Api.dll
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.pdb
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\Gamer Api.genruntimeconfig.cache
+C:\Users\fytho\Documents\Github\Projeto-Gamer-Refatorado\Gamer Api\obj\Debug\net8.0\ref\Gamer Api.dll
