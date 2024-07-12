@@ -1,27 +1,15 @@
-import { useState } from "react";
-import Arrow from "../Arrow";
-import Logo from "../Logo";
-import MenuIconComponent from "../MenuIconComponent";
-import Navbar from "./Navbar";
+import HeaderTop from "./HeaderTop/HeaderTop";
+import HeaderBottom from "./HeaderBottom/HeaderBottom";
 import { HeaderStyle } from "./style";
-import SideBar from "./SideBar";
+import { GridLayout } from "../Container/Container";
 
 const Header = () => {
-  const [exibeNavbar, setExibeNavbar] = useState<boolean>(false);
-  const [exibeSideBar, setExibeSideBar] = useState<boolean>(false);
-
   return (
     <HeaderStyle>
-      <MenuIconComponent
-        exibeNavbar={exibeNavbar}
-        setExibeNavbar={setExibeNavbar}
-      />
-      <Navbar exibeNavbar={String(exibeNavbar)} />
-
-      <Logo />
-
-      <SideBar exibeSideBar={String(exibeSideBar)} />
-      <Arrow setExibeSideBar={setExibeSideBar} exibeSideBar={exibeSideBar} />
+      <GridLayout>
+        <HeaderTop />
+        <HeaderBottom />
+      </GridLayout>
     </HeaderStyle>
   );
 };
