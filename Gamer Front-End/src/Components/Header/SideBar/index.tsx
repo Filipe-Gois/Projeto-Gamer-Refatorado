@@ -1,29 +1,52 @@
+import { Theme } from "../../../Styles/Theme";
 import IconComponent from "../../IconComponent";
-import { LinkNav } from "../Navbar/style";
+import LinkComponent from "../../LinkComponent";
 import { LiSideBar, SideBarStyle, UlSideBar } from "./style";
 
 type SideBarProps = {
   exibeSideBar?: string;
+  setExibeSideBar(exibeSideBar: boolean): void;
 };
 
-const SideBar = ({ exibeSideBar = "false" }: SideBarProps) => {
+const SideBar = ({ exibeSideBar = "false", setExibeSideBar }: SideBarProps) => {
+  const iconColor = Theme.colors.primary;
+  const strokeColor = Theme.colors.secondary;
+
   return (
     <SideBarStyle $exibeSideBar={exibeSideBar}>
       <UlSideBar>
         <LiSideBar>
-          <LinkNav to={"/"}>
-            <IconComponent iconType="user" />
-          </LinkNav>
+          <LinkComponent onClick={() => setExibeSideBar(false)} to={"/"}>
+            <IconComponent
+              strokeSvg={strokeColor}
+              fillSvg={iconColor}
+              strokePath={strokeColor}
+              fillPath={iconColor}
+              iconType="user"
+            />
+          </LinkComponent>
         </LiSideBar>
         <LiSideBar>
-          <LinkNav to={"/"}>
-            <IconComponent iconType="cart" />
-          </LinkNav>
+          <LinkComponent onClick={() => setExibeSideBar(false)} to={"/"}>
+            <IconComponent
+              strokeSvg={strokeColor}
+              fillSvg={iconColor}
+              strokePath={strokeColor}
+              fillPath={iconColor}
+              iconType="cart"
+            />
+          </LinkComponent>
         </LiSideBar>
         <LiSideBar>
-          <LinkNav to={"/"}>
-            <IconComponent iconType="search" />
-          </LinkNav>
+          <LinkComponent onClick={() => setExibeSideBar(false)} to={"/"}>
+            <IconComponent
+              strokeSvg={strokeColor}
+              fillSvg={iconColor}
+              strokePath={strokeColor}
+              fillPath={iconColor}
+              iconType="search"
+            />
+          </LinkComponent>
         </LiSideBar>
       </UlSideBar>
     </SideBarStyle>

@@ -1,19 +1,24 @@
 import styled from "styled-components";
 
 type IconProps = {
-  colorSvg?: string;
+  $fillSvg?: string;
+  $strokeSvg?: string;
 };
 
 type PathProps = {
-  colorSvg?: string;
+  $fillPath?: string;
+  $strokePath?: string;
 };
 
-export const IconStyle = styled.svg.attrs<IconProps>({
+export const IconStyle = styled.svg.attrs<IconProps>((props) => ({
   width: 20,
   height: 20,
-})`
-  fill: ${(props) => props.colorSvg || "none"};
+  fill: props.$fillSvg || "none",
+  stroke: props.$strokeSvg || "none",
+}))`
+  /* fill: ${(props) => props.fill || "none"}; */
 `;
 export const PathStyle = styled.path.attrs<PathProps>((props) => ({
-  fill: props.colorSvg || props.theme.colors.tertiary,
+  fill: props.$fillPath || props.theme.colors.tertiary,
+  stroke: props.$strokePath || "none",
 }))``;

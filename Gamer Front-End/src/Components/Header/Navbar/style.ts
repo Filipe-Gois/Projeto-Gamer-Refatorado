@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 type NavbarProps = {
@@ -24,6 +23,17 @@ export const NavbarStyle = styled.nav<NavbarProps>`
   z-index: 5;
   background-image: ${(props) =>
     `linear-gradient(to bottom right, ${props.theme.colors.primary} , rgba(27,20,38,0.7),  rgba(27,20,38,0.4))`};
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+    width: max-content;
+    height: 100%;
+    bottom: auto;
+    left: auto;
+  }
 `;
 
 export const UlNav = styled.ul`
@@ -34,7 +44,15 @@ export const UlNav = styled.ul`
   /* justify-content: center; */
   align-items: center;
   list-style: none;
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    width: max-content;
+    flex-direction: row;
+    gap: 60px;
+  }
 `;
+
 export const LiNav = styled.li<LiNavProps>`
   width: 100%;
   height: 10vh;
@@ -46,21 +64,17 @@ export const LiNav = styled.li<LiNavProps>`
     css`
       border-bottom: 2px solid ${props.theme.colors.secondary};
     `};
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    width: max-content;
+    border: none;
+    flex-direction: row;
+  }
 `;
 
-export const LinkNav = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  width: 100%;
-  height: 100%;
-  align-self: center;
-  color: ${(props) => props.theme.colors.tertiary};
-`;
-
-export const MidiasSociaisBox = styled.div`
-  display: flex;
-  gap: 43px;
+export const LiNavContato = styled(LiNav)`
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;

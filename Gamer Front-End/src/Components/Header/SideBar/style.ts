@@ -15,11 +15,34 @@ export const SideBarStyle = styled.div<SideBarProps>`
   z-index: 5;
   background-image: ${(props) =>
     `linear-gradient(to bottom left, ${props.theme.colors.primary} , rgba(27,20,38,0.7),  rgba(27,20,38,0.4))`};
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    height: 100%;
+    width: max-content;
+    border: none;
+    flex-direction: row;
+  }
 `;
 
 export const UlSideBar = styled(UlNav)`
   height: 100%;
+
+  @media screen and (min-width: 768px) {
+    position: static;
+    height: 100%;
+    width: max-content;
+    border: none;
+    flex-direction: row;
+
+    gap: 25px;
+  }
 `;
 export const LiSideBar = styled(LiNav)`
   border: none;
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+    width: max-content;
+  }
 `;

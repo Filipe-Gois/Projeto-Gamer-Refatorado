@@ -15,11 +15,17 @@ const HeaderBottom = () => {
         exibeNavbar={exibeNavbar}
         setExibeNavbar={setExibeNavbar}
       />
-      <Navbar exibeNavbar={String(exibeNavbar)} />
 
       <Logo />
+      <Navbar
+        setExibeNavbar={setExibeNavbar}
+        exibeNavbar={String(exibeNavbar)}
+      />
 
-      <SideBar exibeSideBar={String(exibeSideBar)} />
+      <SideBar
+        setExibeSideBar={setExibeSideBar}
+        exibeSideBar={String(exibeSideBar)}
+      />
       <Arrow setExibeSideBar={setExibeSideBar} exibeSideBar={exibeSideBar} />
     </HeaderBottomStyle>
   );

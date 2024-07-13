@@ -1,46 +1,54 @@
+import { Theme } from "../../../Styles/Theme";
 import IconComponent from "../../IconComponent";
-import { LiNav, LinkNav, MidiasSociaisBox, NavbarStyle, UlNav } from "./style";
+import LinkComponent from "../../LinkComponent";
+import MidiasSociaisComponent from "../MidiasSociais";
+import { LiNav, LiNavContato, NavbarStyle, UlNav } from "./style";
 
 type NavBarProps = {
   exibeNavbar?: string;
+  setExibeNavbar(exibeNavbar: boolean): void;
 };
 
-const Navbar = ({ exibeNavbar = "false" }: NavBarProps) => {
+const Navbar = ({ exibeNavbar = "false", setExibeNavbar }: NavBarProps) => {
   return (
     <NavbarStyle $exibenavbar={exibeNavbar}>
       <UlNav>
         <LiNav>
-          <LinkNav to={"/"}>Início</LinkNav>
+          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+            Início
+          </LinkComponent>
         </LiNav>
 
         <LiNav>
-          <LinkNav to={"/"}>Jogadores</LinkNav>
+          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+            Jogadores
+          </LinkComponent>
         </LiNav>
         <LiNav>
-          <LinkNav to={"/"}>Equipes</LinkNav>
+          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+            Equipes
+          </LinkComponent>
         </LiNav>
         <LiNav>
-          <LinkNav to={"/"}>Notícias</LinkNav>
+          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+            Notícias
+          </LinkComponent>
         </LiNav>
-        <LiNav>
-          <LinkNav to={"/"}>
-            <IconComponent iconType="phone" />
+        <LiNavContato>
+          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+            <IconComponent strokePath={Theme.colors.primary} iconType="phone" />
             <p>(11) 0900-1010</p>
-          </LinkNav>
-        </LiNav>
-        <LiNav $isLast>
-          <LinkNav to={"/"}>
+          </LinkComponent>
+        </LiNavContato>
+        <LiNavContato $isLast>
+          <LinkComponent to={"/"}>
             <IconComponent iconType="mail" />
             <p>contato@gamer.com.br</p>
-          </LinkNav>
-        </LiNav>
+          </LinkComponent>
+        </LiNavContato>
       </UlNav>
 
-      <MidiasSociaisBox>
-        <IconComponent iconType="facebook" />
-        <IconComponent iconType="linkedin" />
-        <IconComponent iconType="instagram" />
-      </MidiasSociaisBox>
+      <MidiasSociaisComponent display="none" />
     </NavbarStyle>
   );
 };

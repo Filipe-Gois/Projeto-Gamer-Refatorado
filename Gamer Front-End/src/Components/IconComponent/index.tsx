@@ -11,14 +11,18 @@ type IconProps = {
     | "phone"
     | "mail"
     | "uparrow";
-  color?: string;
-  colorSvg?: string;
+  fillSvg?: string;
+  strokeSvg?: string;
+  fillPath?: string;
+  strokePath?: string;
 };
 
 const IconComponent = ({
   iconType,
-  color = `#FFFFFF`,
-  colorSvg,
+  fillSvg = `#FFFFFF`,
+  strokeSvg = `#FFFFFF`,
+  fillPath = `#FFFFFF`,
+  strokePath = `#FFFFFF`,
 }: IconProps) => {
   let pathIcone: string;
   switch (iconType.toLowerCase()) {
@@ -26,7 +30,6 @@ const IconComponent = ({
       pathIcone =
         "M12.1481 12.375L12.8222 8.39352H8.60725V5.80981C8.60725 4.72055 9.19605 3.65879 11.0838 3.65879H13V0.268984C13 0.268984 11.2611 0 9.59853 0C6.12738 0 3.85847 1.90695 3.85847 5.35906V8.39352H0V12.375H3.85847V22H8.60725V12.375H12.1481Z";
       break;
-
     case "linkedin":
       pathIcone =
         "M18.5714 0H1.42411C0.638393 0 0 0.647322 0 1.44196V18.558C0 19.3527 0.638393 20 1.42411 20H18.5714C19.3571 20 20 19.3527 20 18.558V1.44196C20 0.647322 19.3571 0 18.5714 0ZM6.04464 17.1429H3.08036V7.59821H6.04911V17.1429H6.04464ZM4.5625 6.29464C3.61161 6.29464 2.84375 5.52232 2.84375 4.57589C2.84375 3.62946 3.61161 2.85714 4.5625 2.85714C5.50893 2.85714 6.28125 3.62946 6.28125 4.57589C6.28125 5.52679 5.51339 6.29464 4.5625 6.29464ZM17.1562 17.1429H14.192V12.5C14.192 11.3929 14.1696 9.96875 12.6518 9.96875C11.1071 9.96875 10.8705 11.1741 10.8705 12.4196V17.1429H7.90625V7.59821H10.75V8.90179H10.7902C11.1875 8.15179 12.1563 7.36161 13.5982 7.36161C16.5982 7.36161 17.1562 9.33929 17.1562 11.9107V17.1429Z";
@@ -75,8 +78,8 @@ const IconComponent = ({
   }
 
   return (
-    <IconStyle colorSvg={colorSvg}>
-      <PathStyle d={pathIcone} fill={color} />
+    <IconStyle $fillSvg={fillSvg} $strokeSvg={strokeSvg}>
+      <PathStyle $fillPath={fillPath} $strokePath={strokePath} d={pathIcone} />
     </IconStyle>
   );
 };
