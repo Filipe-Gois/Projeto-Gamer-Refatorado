@@ -15,6 +15,7 @@ export const SideBarStyle = styled.div<SideBarProps>`
   z-index: 5;
   background-image: ${(props) =>
     `linear-gradient(to bottom left, ${props.theme.colors.primary} , rgba(27,20,38,0.7),  rgba(27,20,38,0.4))`};
+  backdrop-filter: blur(45px);
 
   @media screen and (min-width: 768px) {
     position: static;

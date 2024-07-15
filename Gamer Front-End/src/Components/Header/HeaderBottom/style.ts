@@ -6,8 +6,10 @@ export const HeaderBottomStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 5%;
 
   @media screen and (min-width: 768px) {
     height: 65%;
+    padding: 0 10%;
   }
 `;

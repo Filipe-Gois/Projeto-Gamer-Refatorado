@@ -3,14 +3,19 @@ import "./style.css";
 type ArrowProps = {
   exibeSideBar: boolean;
   setExibeSideBar(exibeSideBar: boolean): void;
+  sideBarIconRef: React.RefObject<HTMLInputElement>;
 };
 
-const Arrow = ({ exibeSideBar, setExibeSideBar }: ArrowProps) => {
+const Arrow = ({
+  exibeSideBar,
+  setExibeSideBar,
+  sideBarIconRef,
+}: ArrowProps) => {
   const abrirFecharSideBar = (): void => setExibeSideBar(!exibeSideBar);
 
   return (
     <label className="container" onChange={abrirFecharSideBar}>
-      <input type="checkbox" />
+      <input ref={sideBarIconRef} type="checkbox" />
       <svg
         viewBox="0 0 320 512"
         height="1em"

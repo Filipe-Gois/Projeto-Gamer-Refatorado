@@ -13,7 +13,6 @@
 }
 
 .container .chevron-right {
-  /* position: absolute; */
   animation: keyframes-return 0.5s backwards;
 }
 

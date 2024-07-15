@@ -11,18 +11,19 @@ type LiNavProps = {
 export const NavbarStyle = styled.nav<NavbarProps>`
   width: 72vw;
   height: calc(100vh - 60px);
+  z-index: 101;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   padding: 0 0 20px 0;
   bottom: 0;
   transition: left 0.5s ease-in-out, opacity 0.6s;
   left: ${(props) => (props.$exibenavbar === "true" ? "0" : "-72vw")};
-  z-index: 5;
   background-image: ${(props) =>
     `linear-gradient(to bottom right, ${props.theme.colors.primary} , rgba(27,20,38,0.7),  rgba(27,20,38,0.4))`};
+  backdrop-filter: blur(45px);
 
   @media screen and (min-width: 768px) {
     flex-direction: row;

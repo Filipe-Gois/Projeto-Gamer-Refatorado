@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Arrow from "../../Arrow";
 import Logo from "../../Logo";
 import MenuIconComponent from "../../MenuIconComponent";
@@ -9,24 +9,34 @@ import { HeaderBottomStyle } from "./style";
 const HeaderBottom = () => {
   const [exibeNavbar, setExibeNavbar] = useState<boolean>(false);
   const [exibeSideBar, setExibeSideBar] = useState<boolean>(false);
+  const navIconRef = useRef<HTMLInputElement>(null);
+  const sideBarIconRef = useRef<HTMLInputElement>(null);
+
   return (
     <HeaderBottomStyle>
       <MenuIconComponent
+        navRef={navIconRef}
         exibeNavbar={exibeNavbar}
         setExibeNavbar={setExibeNavbar}
       />
 
       <Logo />
       <Navbar
+        navIconRef={navIconRef}
         setExibeNavbar={setExibeNavbar}
         exibeNavbar={String(exibeNavbar)}
       />
 
       <SideBar
+        sideBarIconRef={sideBarIconRef}
         setExibeSideBar={setExibeSideBar}
         exibeSideBar={String(exibeSideBar)}
       />
-      <Arrow setExibeSideBar={setExibeSideBar} exibeSideBar={exibeSideBar} />
+      <Arrow
+        sideBarIconRef={sideBarIconRef}
+        setExibeSideBar={setExibeSideBar}
+        exibeSideBar={exibeSideBar}
+      />
     </HeaderBottomStyle>
   );
 };

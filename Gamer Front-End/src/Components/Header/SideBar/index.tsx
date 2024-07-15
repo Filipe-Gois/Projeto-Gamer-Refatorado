@@ -6,17 +6,30 @@ import { LiSideBar, SideBarStyle, UlSideBar } from "./style";
 type SideBarProps = {
   exibeSideBar?: string;
   setExibeSideBar(exibeSideBar: boolean): void;
+  sideBarIconRef: React.RefObject<HTMLInputElement>;
 };
 
-const SideBar = ({ exibeSideBar = "false", setExibeSideBar }: SideBarProps) => {
+const SideBar = ({
+  exibeSideBar = "false",
+  setExibeSideBar,
+  sideBarIconRef,
+}: SideBarProps) => {
   const iconColor = Theme.colors.primary;
   const strokeColor = Theme.colors.secondary;
+
+  const fecharSideBar = () => {
+    if (sideBarIconRef.current) {
+      sideBarIconRef.current.checked = false;
+    }
+
+    setExibeSideBar(false);
+  };
 
   return (
     <SideBarStyle $exibeSideBar={exibeSideBar}>
       <UlSideBar>
         <LiSideBar>
-          <LinkComponent onClick={() => setExibeSideBar(false)} to={"/"}>
+          <LinkComponent onClick={fecharSideBar} to={"/"}>
             <IconComponent
               strokeSvg={strokeColor}
               fillSvg={iconColor}
@@ -27,7 +40,7 @@ const SideBar = ({ exibeSideBar = "false", setExibeSideBar }: SideBarProps) => {
           </LinkComponent>
         </LiSideBar>
         <LiSideBar>
-          <LinkComponent onClick={() => setExibeSideBar(false)} to={"/"}>
+          <LinkComponent onClick={fecharSideBar} to={"/"}>
             <IconComponent
               strokeSvg={strokeColor}
               fillSvg={iconColor}
@@ -38,7 +51,7 @@ const SideBar = ({ exibeSideBar = "false", setExibeSideBar }: SideBarProps) => {
           </LinkComponent>
         </LiSideBar>
         <LiSideBar>
-          <LinkComponent onClick={() => setExibeSideBar(false)} to={"/"}>
+          <LinkComponent onClick={fecharSideBar} to={"/"}>
             <IconComponent
               strokeSvg={strokeColor}
               fillSvg={iconColor}

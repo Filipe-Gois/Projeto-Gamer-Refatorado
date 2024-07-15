@@ -7,41 +7,52 @@ import { LiNav, LiNavContato, NavbarStyle, UlNav } from "./style";
 type NavBarProps = {
   exibeNavbar?: string;
   setExibeNavbar(exibeNavbar: boolean): void;
+  navIconRef: React.RefObject<HTMLInputElement>;
 };
 
-const Navbar = ({ exibeNavbar = "false", setExibeNavbar }: NavBarProps) => {
+const Navbar = ({
+  exibeNavbar = "false",
+  setExibeNavbar,
+  navIconRef,
+}: NavBarProps) => {
+  const fecharNavBar = () => {
+    if (navIconRef.current) {
+      navIconRef.current.checked = false;
+    }
+    setExibeNavbar(!exibeNavbar);
+  };
   return (
     <NavbarStyle $exibenavbar={exibeNavbar}>
       <UlNav>
         <LiNav>
-          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+          <LinkComponent onClick={fecharNavBar} to={"/"}>
             Início
           </LinkComponent>
         </LiNav>
 
         <LiNav>
-          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+          <LinkComponent onClick={fecharNavBar} to={"/"}>
             Jogadores
           </LinkComponent>
         </LiNav>
         <LiNav>
-          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+          <LinkComponent onClick={fecharNavBar} to={"/"}>
             Equipes
           </LinkComponent>
         </LiNav>
         <LiNav>
-          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+          <LinkComponent onClick={fecharNavBar} to={"/"}>
             Notícias
           </LinkComponent>
         </LiNav>
         <LiNavContato>
-          <LinkComponent onClick={() => setExibeNavbar(false)} to={"/"}>
+          <LinkComponent onClick={fecharNavBar} to={"/"}>
             <IconComponent strokePath={Theme.colors.primary} iconType="phone" />
             <p>(11) 0900-1010</p>
           </LinkComponent>
         </LiNavContato>
         <LiNavContato $isLast>
-          <LinkComponent to={"/"}>
+          <LinkComponent onClick={fecharNavBar} to={"/"}>
             <IconComponent iconType="mail" />
             <p>contato@gamer.com.br</p>
           </LinkComponent>
