@@ -6,6 +6,10 @@ export const BannerJogosStyle = styled.section`
   background-color: ${(props) => props.theme.colors.primary};
 
   @media screen and (min-width: 768px) {
+    height: 700px;
+  }
+
+  @media screen and (min-width: 1200px) {
     height: 500px;
   }
 `;
@@ -18,9 +22,9 @@ export const BannerJogosContent = styled.div`
   justify-content: space-evenly;
 
   @media screen and (min-width: 768px) {
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    gap: 80px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
   }
 `;

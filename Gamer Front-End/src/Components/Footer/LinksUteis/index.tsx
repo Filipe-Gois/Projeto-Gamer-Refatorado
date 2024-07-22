@@ -4,6 +4,7 @@ import Paragraph from "../../Paragraph";
 import Title from "../../Title";
 import {
   FooterLinksUteisStyle,
+  LiLinksUteis,
   LinksUteisContent,
   LinkUtilItem,
 } from "./style";
@@ -17,6 +18,7 @@ const FooterLinksUteis = () => {
       behavior: "smooth",
     });
   };
+
   const navegarANoticias = () => {
     const noticiasSection = document.querySelector("#noticias-section");
     if (noticiasSection) {
@@ -26,6 +28,7 @@ const FooterLinksUteis = () => {
       });
     }
   };
+
   return (
     <FooterLinksUteisStyle>
       <Title fontSize="30px" text="Links Úteis" />
@@ -37,26 +40,37 @@ const FooterLinksUteis = () => {
       />
 
       <LinksUteisContent>
-        <LinkUtilItem onClick={navegarAoTopo} to={"/"}>
-          <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-          <Paragraph fontSize="16px" text="Início" />
-        </LinkUtilItem>
-        <LinkUtilItem to={"/Jogadores"}>
-          <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-          <Paragraph fontSize="16px" text="Jogadores" />
-        </LinkUtilItem>
-        <LinkUtilItem onClick={navegarANoticias} to={"/"}>
-          <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-          <Paragraph fontSize="16px" text="Notícias" />
-        </LinkUtilItem>
-        <LinkUtilItem to={"/Login"}>
-          <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-          <Paragraph fontSize="16px" text="Login" />
-        </LinkUtilItem>
-        <LinkUtilItem to={"/Equipes"}>
-          <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-          <Paragraph fontSize="16px" text="Equipes" />
-        </LinkUtilItem>
+        <LiLinksUteis>
+          <LinkUtilItem onClick={navegarAoTopo} to={"/"}>
+            <Line height="2px" width="15px" backgroundColor={secondaryColor} />
+            <Paragraph fontSize="16px" text="Início" />
+          </LinkUtilItem>
+        </LiLinksUteis>
+
+        <LiLinksUteis>
+          <LinkUtilItem to={"/Jogadores"}>
+            <Line height="2px" width="15px" backgroundColor={secondaryColor} />
+            <Paragraph fontSize="16px" text="Jogadores" />
+          </LinkUtilItem>
+        </LiLinksUteis>
+        <LiLinksUteis>
+          <LinkUtilItem onClick={navegarANoticias} to={"/"}>
+            <Line height="2px" width="15px" backgroundColor={secondaryColor} />
+            <Paragraph fontSize="16px" text="Notícias" />
+          </LinkUtilItem>
+        </LiLinksUteis>
+        <LiLinksUteis>
+          <LinkUtilItem to={"/Login"}>
+            <Line height="2px" width="15px" backgroundColor={secondaryColor} />
+            <Paragraph fontSize="16px" text="Login" />
+          </LinkUtilItem>
+        </LiLinksUteis>
+        <LiLinksUteis>
+          <LinkUtilItem to={"/Equipes"}>
+            <Line height="2px" width="15px" backgroundColor={secondaryColor} />
+            <Paragraph fontSize="16px" text="Equipes" />
+          </LinkUtilItem>
+        </LiLinksUteis>
       </LinksUteisContent>
     </FooterLinksUteisStyle>
   );

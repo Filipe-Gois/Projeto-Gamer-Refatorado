@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 import BackgroundNoticiasMobile from "../../../assets/images/bannerNoticiasMobile.png";
+import BackgroundNoticiasTablet from "../../../assets/images/noticiasTablet.png";
+import BackgroundNoticiasDesktop from "../../../assets/images/noticiasDesktop.png";
 
 export const BannerNoticiasStyle = styled.section.attrs({
   id: "noticias-section",
@@ -11,7 +13,15 @@ export const BannerNoticiasStyle = styled.section.attrs({
   background-size: cover;
   height: 3675px;
 
-  /* backdrop-filter: blur(8px); */
+  @media screen and (min-width: 768px) {
+    background-image: url(${BackgroundNoticiasTablet});
+    height: 1950px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    background-image: url(${BackgroundNoticiasDesktop});
+    height: 1175px;
+  }
 `;
 
 export const BannerNoticiasContent = styled.div`
@@ -32,6 +42,12 @@ export const NoticiasBox = styled.div`
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 135px;
+
+    align-items: start;
+  }
+  @media screen and (min-width: 1200px) {
   }
 `;

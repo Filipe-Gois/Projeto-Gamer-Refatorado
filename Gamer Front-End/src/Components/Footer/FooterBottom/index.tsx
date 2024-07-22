@@ -19,6 +19,7 @@ const FooterBottom = () => {
       />
 
       <FormComponent
+        margin="40px 0 0 0"
         flexD="column"
         gap="16px"
         onSubmit={(e) => {

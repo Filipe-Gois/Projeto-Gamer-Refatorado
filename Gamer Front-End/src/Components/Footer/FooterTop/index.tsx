@@ -2,6 +2,7 @@ import {
   FooterLogoImg,
   FooterTopStyle,
   IconBoxYellow,
+  LiFooter,
   SociaisBox,
 } from "./style";
 import logoFooterMobile from "../../../assets/images/logotipo-gamer--footer.png";
@@ -22,27 +23,35 @@ const FooterTop = () => {
       <Paragraph text="Nosso sucesso na criação de soluções de negócios se deve em grande parte à nossa equipe talentosa e altamente comprometida." />
 
       <SociaisBox>
-        <IconBoxYellow href={linkedinLink}>
-          <IconComponent
-            fillPath={primaryColor}
-            strokePath={primaryColor}
-            iconType="facebook"
-          />
-        </IconBoxYellow>
-        <IconBoxYellow href={linkedinLink}>
-          <IconComponent
-            fillPath={primaryColor}
-            strokePath={primaryColor}
-            iconType="linkedin"
-          />
-        </IconBoxYellow>
-        <IconBoxYellow href={instagramLink}>
-          <IconComponent
-            fillPath={primaryColor}
-            strokePath={primaryColor}
-            iconType="instagram"
-          />
-        </IconBoxYellow>
+        <LiFooter>
+          <IconBoxYellow href={linkedinLink}>
+            <IconComponent
+              fillPath={primaryColor}
+              strokePath={primaryColor}
+              iconType="facebook"
+            />
+          </IconBoxYellow>
+        </LiFooter>
+
+        <LiFooter>
+          <IconBoxYellow href={linkedinLink}>
+            <IconComponent
+              fillPath={primaryColor}
+              strokePath={primaryColor}
+              iconType="linkedin"
+            />
+          </IconBoxYellow>
+        </LiFooter>
+
+        <LiFooter>
+          <IconBoxYellow href={instagramLink}>
+            <IconComponent
+              fillPath={primaryColor}
+              strokePath={primaryColor}
+              iconType="instagram"
+            />
+          </IconBoxYellow>
+        </LiFooter>
       </SociaisBox>
     </FooterTopStyle>
   );

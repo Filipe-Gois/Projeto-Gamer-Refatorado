@@ -50,6 +50,9 @@ export const UlNav = styled.ul`
     height: 100%;
     width: max-content;
     flex-direction: row;
+    gap: 40px;
+  }
+  @media screen and (min-width: 1200px) {
     gap: 60px;
   }
 `;

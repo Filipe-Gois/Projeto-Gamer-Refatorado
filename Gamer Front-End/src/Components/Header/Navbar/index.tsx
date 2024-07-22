@@ -21,6 +21,16 @@ const Navbar = ({
     }
     setExibeNavbar(!exibeNavbar);
   };
+  const navegarANoticias = () => {
+    fecharNavBar();
+    const noticiasSection = document.querySelector("#noticias-section");
+    if (noticiasSection) {
+      noticiasSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
   return (
     <NavbarStyle $exibenavbar={exibeNavbar}>
       <UlNav>
@@ -41,7 +51,7 @@ const Navbar = ({
           </LinkComponent>
         </LiNav>
         <LiNav>
-          <LinkComponent onClick={fecharNavBar} to={"/"}>
+          <LinkComponent onClick={navegarANoticias} to={"/"}>
             Notícias
           </LinkComponent>
         </LiNav>

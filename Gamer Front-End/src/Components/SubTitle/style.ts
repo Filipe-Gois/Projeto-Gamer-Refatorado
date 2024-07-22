@@ -11,4 +11,12 @@ export const SubTitleStyle = styled.h2<SubTitleProps>`
   font-size: 18px;
   text-align: ${(props) => props.$textAlign || "start"};
   margin: ${(props) => props.$margin || "0"};
+
+  @media screen and (min-width: 768px) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 40px;
+  }
 `;

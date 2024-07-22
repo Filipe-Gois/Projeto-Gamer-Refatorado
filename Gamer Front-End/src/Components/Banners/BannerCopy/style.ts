@@ -5,19 +5,28 @@ type CardPersonagemContentProps = {
 };
 
 type ImagemPersonagemProps = {
-  $maxHeight?: string;
+  $isImageKj?: boolean;
 };
 
 export const BannerCopyStyle = styled.section`
   background-color: ${(props) => props.theme.colors.secondary};
   width: 100%;
   height: 1535px;
+
+  @media screen and (min-width: 1200px) {
+    height: 1000px;
+    flex-direction: row;
+  }
 `;
 
 export const CardPersonagemStyle = styled.article`
   height: max-content;
   width: 100%;
   position: relative;
+
+  @media screen and (min-width: 1200px) {
+    width: max-content;
+  }
 `;
 
 export const BannerCopyContent = styled.div`
@@ -31,22 +40,44 @@ export const BannerCopyContent = styled.div`
 `;
 
 export const ImagemPersonagem = styled.img<ImagemPersonagemProps>`
-  width: 100%;
-  height: 100%;
-  max-height: ${(props) => props.$maxHeight || "511px"};
-  max-width: 326px;
+  ${(props) =>
+    props.$isImageKj
+      ? css`
+          max-width: 326px;
+          max-height: 511px;
+          @media screen and (min-width: 768px) {
+            max-width: 363px;
+            max-height: 591px;
+          }
+
+          @media screen and (min-width: 1200px) {
+            max-width: 425px;
+            max-height: 692px;
+          }
+        `
+      : css`
+          max-width: 326px;
+          max-height: 428px;
+          @media screen and (min-width: 768px) {
+            max-width: 486px;
+            max-height: 645px;
+          }
+          @media screen and (min-width: 1200px) {
+            max-width: 521px;
+            max-height: 692px;
+          }
+        `}
 `;
 
 export const CardPersonagemContent = styled.div<CardPersonagemContentProps>`
   width: 70%;
   height: 55%;
   min-height: 300px;
-  max-width: 300px;
+  min-width: 231px;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* gap: 20px; */
   align-items: center;
   padding: 20px;
 
@@ -57,10 +88,29 @@ export const CardPersonagemContent = styled.div<CardPersonagemContentProps>`
       ? css`
           right: 0px;
           bottom: 90px;
+
+          @media screen and (min-width: 768px) {
+            left: 39%;
+            bottom: 75px;
+          }
+
+          @media screen and (min-width: 1200px) {
+            right: 0;
+            left: auto;
+          }
         `
       : css`
           left: -13px;
           bottom: 17px;
+
+          @media screen and (min-width: 768px) {
+            left: -100px;
+            bottom: 75px;
+          }
+
+          @media screen and (min-width: 1200px) {
+            left: 0;
+          }
         `}
 
   backdrop-filter: blur(15px);
@@ -69,13 +119,17 @@ export const CardPersonagemContent = styled.div<CardPersonagemContentProps>`
     rgba(110, 49, 236, 0.2),
     rgba(45, 7, 109, 0.83)
   );
-  /* border: 1px solid;
-  border-image: linear-gradient(
-      to bottom right,
-      rgba(255, 255, 255, 1),
-      rgba(27, 20, 38, 0)
-    )
-    1; */
+
+  @media screen and (min-width: 768px) {
+    width: 360px;
+    height: 430px;
+    justify-content: flex-start;
+    gap: 40px;
+    padding: 20px 8%;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 `;
 
 export const CardPersonagemImage = styled.img`
@@ -83,6 +137,11 @@ export const CardPersonagemImage = styled.img`
   height: 100%;
   max-width: 97px;
   max-height: 97px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 153px;
+    max-height: 153px;
+  }
 `;
 
 export const CardsContainer = styled.div`
@@ -92,4 +151,10 @@ export const CardsContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
 `;

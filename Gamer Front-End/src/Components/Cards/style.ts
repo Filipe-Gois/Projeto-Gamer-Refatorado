@@ -10,7 +10,14 @@ export const CardJogoStyle = styled.article<CardJogoProps>`
   position: relative;
   border-radius: 8px;
   @media screen and (min-width: 768px) {
+    height: 200px;
     width: 90%;
+    max-width: 400px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 313px;
+    max-width: 556px;
   }
 `;
 
@@ -30,7 +37,7 @@ export const CardJogoImgDesktop = styled.img`
   display: none;
 
   @media screen and (min-width: 768px) {
-    display: flex;
+    display: inline;
   }
 `;
 
@@ -58,6 +65,15 @@ export const CardNoticiaStyle = styled.article`
   );
   backdrop-filter: blur(6px);
   max-height: 387px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    max-width: 300px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 200px;
+  }
 `;
 export const CardNoticiaImage = styled.img`
   width: 100%;

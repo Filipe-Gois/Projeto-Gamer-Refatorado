@@ -2,14 +2,16 @@ import styled from "styled-components";
 
 type ContainerProps = {
   $padding?: string;
+  $flexD?: string;
 };
 
 export const Container = styled.div<ContainerProps>`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => props.$flexD || "column"};
   justify-content: center;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
   height: 100%;
   padding: ${(props) => props.$padding || "0"};
 `;

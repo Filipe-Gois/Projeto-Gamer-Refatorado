@@ -18,4 +18,11 @@ export const ContainerContato = styled.div`
   display: flex;
   align-items: center;
   gap: 50px;
+
+  @media screen and (min-width: 768px) {
+    gap: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    gap: 50px;
+  }
 `;
