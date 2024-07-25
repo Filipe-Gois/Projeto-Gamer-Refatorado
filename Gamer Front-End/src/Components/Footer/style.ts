@@ -2,6 +2,8 @@ import styled from "styled-components";
 import backGroundMobile from "../../assets/images/footerBackGourndImageMobile.png";
 import backGroundTablet from "../../assets/images/footerBackGourndImageTablet.png";
 import backGroundDesktop from "../../assets/images/footerBackGourndImageDesktop.png";
+import { Container } from "../Container/Container";
+import { ParagraphStyle } from "../Paragraph/style";
 
 export const FooterStyle = styled.footer`
   width: 100%;
@@ -33,4 +35,25 @@ export const FooterRow1 = styled.div`
     width: 50%;
   }
 `;
-export const FooterRow2 = styled(FooterRow1)``;
+export const FooterRow2 = styled(FooterRow1)`
+  @media screen and (min-width: 1200px) {
+    max-height: 307px;
+  }
+`;
+
+export const ContainerFooter = styled(Container)`
+  @media screen and (min-width: 1200px) {
+    padding: 106px 0 40px 0;
+    flex-direction: row;
+  }
+`;
+
+export const CopyRyghtText = styled(ParagraphStyle)`
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-top: 91px;
+  }
+`;

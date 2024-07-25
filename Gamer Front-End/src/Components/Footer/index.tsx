@@ -1,16 +1,21 @@
-import { Container, GridLayout } from "../Container/Container";
+import { GridLayout } from "../Container/Container";
 import FooterBottom from "./FooterBottom";
 import FooterTop from "./FooterTop";
-import { FooterRow1, FooterRow2, FooterStyle } from "./style";
+import {
+  ContainerFooter,
+  CopyRyghtText,
+  FooterRow1,
+  FooterRow2,
+  FooterStyle,
+} from "./style";
 import FooterLinksUteis from "./LinksUteis";
 import FooterContatos from "./FooterContatos";
-import Paragraph from "../Paragraph";
 
 const Footer = () => {
   return (
     <FooterStyle>
       <GridLayout>
-        <Container $flexD="row" $padding="0 0 40px 0">
+        <ContainerFooter>
           <FooterRow1>
             <FooterTop />
             <FooterLinksUteis />
@@ -19,8 +24,8 @@ const Footer = () => {
             <FooterContatos />
             <FooterBottom />
           </FooterRow2>
-          <Paragraph text={`©Copyright2022-GamerJogosDigitais`} />
-        </Container>
+          <CopyRyghtText>©Copyright2022-GamerJogosDigitais</CopyRyghtText>
+        </ContainerFooter>
       </GridLayout>
     </FooterStyle>
   );
