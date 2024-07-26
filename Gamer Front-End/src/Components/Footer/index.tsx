@@ -4,6 +4,7 @@ import FooterTop from "./FooterTop";
 import {
   ContainerFooter,
   CopyRyghtText,
+  FooterGradient,
   FooterRow1,
   FooterRow2,
   FooterStyle,
@@ -14,6 +15,7 @@ import FooterContatos from "./FooterContatos";
 const Footer = () => {
   return (
     <FooterStyle>
+      <FooterGradient />
       <GridLayout>
         <ContainerFooter>
           <FooterRow1>

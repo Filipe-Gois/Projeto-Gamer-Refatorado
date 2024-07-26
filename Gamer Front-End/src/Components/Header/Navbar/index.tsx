@@ -21,6 +21,13 @@ const Navbar = ({
     }
     setExibeNavbar(!exibeNavbar);
   };
+
+  const irAoTopo = () => {
+    fecharNavBar();
+
+    window.scrollTo({ behavior: "smooth", top: 0 });
+  };
+
   const navegarANoticias = () => {
     fecharNavBar();
     const noticiasSection = document.querySelector("#noticias-section");
@@ -35,7 +42,7 @@ const Navbar = ({
     <NavbarStyle $exibenavbar={exibeNavbar}>
       <UlNav>
         <LiNav>
-          <LinkComponent onClick={fecharNavBar} to={"/"}>
+          <LinkComponent onClick={irAoTopo} to={"/"}>
             Início
           </LinkComponent>
         </LiNav>

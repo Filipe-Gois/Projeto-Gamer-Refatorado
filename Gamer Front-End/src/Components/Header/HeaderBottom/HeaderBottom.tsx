@@ -12,6 +12,10 @@ const HeaderBottom = () => {
   const navIconRef = useRef<HTMLInputElement>(null);
   const sideBarIconRef = useRef<HTMLInputElement>(null);
 
+  const irAoTopo = () => {
+    window.scrollTo({ behavior: "smooth", top: 0 });
+  };
+
   return (
     <HeaderBottomStyle>
       <MenuIconComponent
@@ -20,7 +24,7 @@ const HeaderBottom = () => {
         setExibeNavbar={setExibeNavbar}
       />
 
-      <Logo />
+      <Logo onClick={irAoTopo} />
       <Navbar
         navIconRef={navIconRef}
         setExibeNavbar={setExibeNavbar}

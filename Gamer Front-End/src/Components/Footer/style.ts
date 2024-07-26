@@ -23,6 +23,7 @@ export const FooterStyle = styled.footer`
 
 export const FooterRow1 = styled.div`
   display: flex;
+  /* position: absolute; */
   width: 100%;
   height: 100%;
   flex-direction: column;
@@ -36,6 +37,7 @@ export const FooterRow1 = styled.div`
   }
 `;
 export const FooterRow2 = styled(FooterRow1)`
+  /* position: static; */
   @media screen and (min-width: 1200px) {
     max-height: 307px;
   }
@@ -43,7 +45,7 @@ export const FooterRow2 = styled(FooterRow1)`
 
 export const ContainerFooter = styled(Container)`
   @media screen and (min-width: 1200px) {
-    padding: 106px 0 40px 0;
+    padding: 0 0 40px 0;
     flex-direction: row;
   }
 `;
@@ -55,5 +57,21 @@ export const CopyRyghtText = styled(ParagraphStyle)`
   @media screen and (min-width: 1200px) {
     margin-bottom: 0;
     margin-top: 91px;
+  }
+`;
+
+export const FooterGradient = styled.div`
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(36, 6, 54, 0.59),
+      rgba(67, 3, 99, 0.03)
+    );
+    width: 100%;
+    height: 212px;
   }
 `;
