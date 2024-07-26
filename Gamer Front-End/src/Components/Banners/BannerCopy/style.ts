@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled, { css } from "styled-components";
 
 type CardPersonagemContentProps = {
@@ -8,10 +9,11 @@ type ImagemPersonagemProps = {
   $isImageKj?: boolean;
 };
 
-export const BannerCopyStyle = styled.section`
+export const BannerCopyStyle = styled(motion.section)`
   background-color: ${(props) => props.theme.colors.secondary};
   width: 100%;
   height: 1535px;
+  overflow: hidden;
 
   @media screen and (min-width: 1200px) {
     height: 1000px;
@@ -19,8 +21,10 @@ export const BannerCopyStyle = styled.section`
   }
 `;
 
-export const CardPersonagemStyle = styled.article`
+export const CardPersonagemStyle = styled(motion.article)`
   height: max-content;
+  cursor: pointer;
+  user-select: none;
   width: 100%;
   position: relative;
 

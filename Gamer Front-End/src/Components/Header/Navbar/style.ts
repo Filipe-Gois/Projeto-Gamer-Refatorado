@@ -6,6 +6,7 @@ type NavbarProps = {
 
 type LiNavProps = {
   $isLast?: boolean;
+  $isNavList?: boolean;
 };
 
 export const NavbarStyle = styled.nav<NavbarProps>`
@@ -63,6 +64,29 @@ export const LiNav = styled.li<LiNavProps>`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  ${(props) =>
+    props.$isNavList &&
+    css`
+      position: relative;
+      padding-bottom: 4px;
+
+      &::after {
+        content: " ";
+        width: 0%;
+        height: 4px;
+        background-color: ${props.theme.colors.secondary};
+        position: absolute;
+        bottom: 0;
+        transition: ease-in-out 0.5s;
+        left: 0;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    `}
+
   ${(props) =>
     !props.$isLast &&
     css`
@@ -70,7 +94,7 @@ export const LiNav = styled.li<LiNavProps>`
     `};
 
   @media screen and (min-width: 768px) {
-    height: 100%;
+    height: max-content;
     width: max-content;
     border: none;
     flex-direction: row;

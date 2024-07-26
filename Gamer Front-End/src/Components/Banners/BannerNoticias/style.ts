@@ -11,11 +11,11 @@ export const BannerNoticiasStyle = styled.section.attrs({
   background-image: url(${BackgroundNoticiasMobile});
   background-repeat: no-repeat;
   background-size: cover;
-  height: 3675px;
+  height: 800px;
 
   @media screen and (min-width: 768px) {
     background-image: url(${BackgroundNoticiasTablet});
-    height: 1950px;
+    height: 800px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -38,16 +38,11 @@ export const NoticiasBox = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 135px;
-
-    align-items: start;
-  }
-  @media screen and (min-width: 1200px) {
   }
 `;

@@ -30,16 +30,35 @@ import SubTitle from "../../SubTitle";
 import SectionTitle from "../../SectionTitle";
 import Paragraph from "../../Paragraph";
 import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const BannerCopy = () => {
+  const [images, setImages] = useState<PersonagensProps | null>(null);
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Anima apenas uma vez quando a seção entra em vista
+    threshold: 0.1, // A porcentagem da seção visível para disparar a animação
+  });
+
+  const variants = {
+    hiddenLeft: {
+      opacity: 0,
+      x: "-100vw",
+    },
+    hiddenRight: {
+      opacity: 0,
+      x: "100vw",
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
   type PersonagensProps = {
     imgKj: string;
     imgJinx: string;
     imgInstrutor: string;
     imgControle: string;
   };
-
-  const [images, setImages] = useState<PersonagensProps | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -74,8 +93,9 @@ const BannerCopy = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
-    <BannerCopyStyle>
+    <BannerCopyStyle ref={ref}>
       <GridLayout>
         <BannerCopyContent>
           <SubTitle
@@ -88,7 +108,12 @@ const BannerCopy = () => {
           <Line width="204px" />
 
           <CardsContainer>
-            <CardPersonagemStyle>
+            <CardPersonagemStyle
+              variants={variants}
+              initial={"hidden"}
+              animate={inView ? "visible" : "hiddenLeft"}
+              transition={{ duration: 1.5 }}
+            >
               <ImagemPersonagem $isImageKj src={images?.imgKj} />
 
               <CardPersonagemContent $right>
@@ -102,7 +127,12 @@ const BannerCopy = () => {
                 />
               </CardPersonagemContent>
             </CardPersonagemStyle>
-            <CardPersonagemStyle>
+            <CardPersonagemStyle
+              variants={variants}
+              initial={"hidden"}
+              animate={inView ? "visible" : "hiddenRight"}
+              transition={{ duration: 1.5 }}
+            >
               <ImagemPersonagem src={images?.imgJinx} />
 
               <CardPersonagemContent>

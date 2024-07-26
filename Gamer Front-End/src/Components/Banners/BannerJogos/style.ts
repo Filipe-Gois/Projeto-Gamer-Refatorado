@@ -1,9 +1,11 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const BannerJogosStyle = styled.section`
+export const BannerJogosStyle = styled(motion.section)`
   width: 100%;
   height: 590px;
   background-color: ${(props) => props.theme.colors.primary};
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     height: 700px;

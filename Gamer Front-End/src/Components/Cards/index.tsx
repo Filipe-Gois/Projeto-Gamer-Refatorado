@@ -18,6 +18,8 @@ import Paragraph from "../Paragraph";
 type CardJogoProps = {
   image?: "fifa" | "cs";
   text: string;
+  direction: "left" | "right";
+  inView: boolean;
 };
 type CardNoticiaProps = {
   image: string;
@@ -25,9 +27,25 @@ type CardNoticiaProps = {
   description?: string;
 };
 
-const CardJogo = ({ image = "cs", text }: CardJogoProps) => {
+const CardJogo = ({ image = "cs", text, direction, inView }: CardJogoProps) => {
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x: direction === "left" ? "-100vw" : "100vw",
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
   return (
-    <CardJogoStyle>
+    <CardJogoStyle
+      variants={variants}
+      initial={"hidden"}
+      animate={inView ? "visible" : "hidden"}
+      transition={{ duration: 1.5 }}
+    >
       <CardJogoImgMobile src={image === "cs" ? csMobile : fifaMobile} />
 
       <CardJogoImgDesktop src={image === "cs" ? csDesktop : fifaDesktop} />

@@ -41,23 +41,23 @@ const Navbar = ({
   return (
     <NavbarStyle $exibenavbar={exibeNavbar}>
       <UlNav>
-        <LiNav>
+        <LiNav $isNavList>
           <LinkComponent onClick={irAoTopo} to={"/"}>
             Início
           </LinkComponent>
         </LiNav>
 
-        <LiNav>
+        <LiNav $isNavList>
           <LinkComponent onClick={fecharNavBar} to={"/"}>
             Jogadores
           </LinkComponent>
         </LiNav>
-        <LiNav>
+        <LiNav $isNavList>
           <LinkComponent onClick={fecharNavBar} to={"/"}>
             Equipes
           </LinkComponent>
         </LiNav>
-        <LiNav>
+        <LiNav $isNavList>
           <LinkComponent onClick={navegarANoticias} to={"/"}>
             Notícias
           </LinkComponent>

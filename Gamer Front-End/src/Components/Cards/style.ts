@@ -1,13 +1,15 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 type CardJogoProps = {
   $image?: "fifa" | "cs";
 };
 
-export const CardJogoStyle = styled.article<CardJogoProps>`
+export const CardJogoStyle = styled(motion.article)<CardJogoProps>`
   width: 100%;
   height: 189px;
-  position: relative;
+  cursor: pointer;
+  user-select: none;
   border-radius: 8px;
   @media screen and (min-width: 768px) {
     height: 200px;
@@ -58,21 +60,26 @@ export const ButtonBox = styled.div`
 
 export const CardNoticiaStyle = styled.article`
   border-radius: 8px;
+  user-select: none;
   background-image: linear-gradient(
     to bottom right,
     rgba(37, 26, 52, 0.34),
     rgba(5, 1, 12, 0.79)
   );
   backdrop-filter: blur(6px);
-  max-height: 387px;
+  height: 387px;
   width: 100%;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media screen and (min-width: 768px) {
     max-width: 300px;
   }
 
   @media screen and (min-width: 1200px) {
-    max-width: 200px;
+    max-width: 285px;
   }
 `;
 export const CardNoticiaImage = styled.img`
@@ -86,5 +93,6 @@ export const NoticiaContentText = styled.div`
   width: 100%;
   height: 55%;
   gap: 16px;
-  padding: 20px;
+  padding: 15px;
+  text-align: justify;
 `;
