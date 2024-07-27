@@ -1,3 +1,4 @@
+import { useLocation, useNavigate } from "react-router-dom";
 import { Theme } from "../../../Styles/Theme";
 import IconComponent from "../../IconComponent";
 import LinkComponent from "../../LinkComponent";
@@ -15,6 +16,9 @@ const Navbar = ({
   setExibeNavbar,
   navIconRef,
 }: NavBarProps) => {
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
   const fecharNavBar = () => {
     if (navIconRef.current) {
       navIconRef.current.checked = false;
@@ -30,14 +34,16 @@ const Navbar = ({
 
   const navegarANoticias = () => {
     fecharNavBar();
+    navigate("/");
     const noticiasSection = document.querySelector("#noticias-section");
-    if (noticiasSection) {
+    if (noticiasSection && pathname === "/") {
       noticiasSection.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     }
   };
+
   return (
     <NavbarStyle $exibenavbar={exibeNavbar}>
       <UlNav>
@@ -58,12 +64,12 @@ const Navbar = ({
           </LinkComponent>
         </LiNav>
         <LiNav $isNavList>
-          <LinkComponent onClick={navegarANoticias} to={"/"}>
+          <LinkComponent onClick={navegarANoticias} to={""}>
             Notícias
           </LinkComponent>
         </LiNav>
         <LiNavContato>
-          <LinkComponent onClick={fecharNavBar} to={"/"}>
+          <LinkComponent to={"/"} onClick={fecharNavBar}>
             <IconComponent strokePath={Theme.colors.primary} iconType="phone" />
             <p>(11) 0900-1010</p>
           </LinkComponent>

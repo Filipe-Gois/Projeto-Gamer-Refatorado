@@ -1,8 +1,12 @@
 import { FormHTMLAttributes, ReactNode } from "react";
-import { FormStyle } from "./style";
+import { FormStyle, FormStyleLogin } from "./style";
+import { Theme } from "../../Styles/Theme";
+import { TitleLogin } from "../Title";
+import ButtonComponent from "../Button";
+import { InputBox, InputPassword } from "../Input";
 
 type FormProps = FormHTMLAttributes<HTMLFormElement> & {
-  children: ReactNode;
+  children?: ReactNode;
   gap?: string;
   flexD?: string;
   justifyContent?: string;
@@ -33,4 +37,23 @@ const FormComponent = ({
   );
 };
 
+const FormLogin = ({ ...rest }: FormProps) => {
+  return (
+    <FormStyleLogin {...rest}>
+      <TitleLogin
+        textColor={Theme.colors.tertiary}
+        textAlign="center"
+        text="Login"
+      />
+
+      <InputBox>
+        <InputPassword />
+        <InputPassword />
+      </InputBox>
+      <ButtonComponent margin="60px 0 0 0" width="100%" text="Logar" />
+    </FormStyleLogin>
+  );
+};
+
+export { FormLogin };
 export default FormComponent;

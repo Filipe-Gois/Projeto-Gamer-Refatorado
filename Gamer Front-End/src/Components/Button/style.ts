@@ -6,9 +6,11 @@ type ButtonProps = {
   $fontSize?: string;
   $width?: string;
   $height?: string;
+  $margin?: string;
 };
 
 export const ButtonStyle = styled.button<ButtonProps>`
+  margin: ${(props) => props.$margin || "auto"};
   background-color: ${(props) =>
     props.$backgroundColor || props.theme.colors.secondary};
   border-radius: 10px;
@@ -37,6 +39,8 @@ export const ButtonStyle = styled.button<ButtonProps>`
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    box-shadow: 0 0 10px ${(props) => props.theme.colors.secondary};
+    transition: all 0.2s ease-in-out;
   }
 `;
 

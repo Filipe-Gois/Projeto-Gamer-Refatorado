@@ -8,6 +8,7 @@ type ButtonProps = {
   fontSize?: string;
   width?: string;
   height?: string;
+  margin?: string;
 };
 
 const ButtonComponent = ({
@@ -18,9 +19,11 @@ const ButtonComponent = ({
   fontSize,
   width,
   height,
+  margin,
 }: ButtonProps) => {
   return (
     <ButtonStyle
+      $margin={margin}
       $width={width}
       $height={height}
       $fontSize={fontSize}

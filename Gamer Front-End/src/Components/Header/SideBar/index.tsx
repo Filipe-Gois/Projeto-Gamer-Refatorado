@@ -29,7 +29,7 @@ const SideBar = ({
     <SideBarStyle $exibeSideBar={exibeSideBar}>
       <UlSideBar>
         <LiSideBar>
-          <LinkComponent onClick={fecharSideBar} to={"/"}>
+          <LinkComponent onClick={fecharSideBar} to={"/Login"}>
             <IconComponent
               strokeSvg={strokeColor}
               fillSvg={iconColor}

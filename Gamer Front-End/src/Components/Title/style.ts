@@ -13,3 +13,11 @@ export const TitleStyle = styled.h1<TitleProps>`
   font-family: ${(props) => props.theme.fonts.titilliumWeb};
   font-weight: 900;
 `;
+
+export const TitleLoginStyle = styled(TitleStyle)`
+  font-size: 28px;
+  border-bottom: 3px solid ${(props) => props.theme.colors.secondary};
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+  }
+`;

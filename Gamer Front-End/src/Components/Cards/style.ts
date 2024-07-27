@@ -86,10 +86,24 @@ export const CardNoticiaStyle = styled.article`
     rgba(5, 1, 12, 0.79)
   );
   backdrop-filter: blur(6px);
-  height: 387px;
+  height: max-content;
   width: 100%;
+  @keyframes Animation {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.05);
+    }
+  }
 
   &:hover {
+    animation-name: Animation;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     cursor: pointer;
   }
 
