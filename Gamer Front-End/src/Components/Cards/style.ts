@@ -11,6 +11,25 @@ export const CardJogoStyle = styled(motion.article)<CardJogoProps>`
   cursor: pointer;
   user-select: none;
   border-radius: 8px;
+
+  @keyframes Animation {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+  &:hover {
+    animation-name: Animation;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
   @media screen and (min-width: 768px) {
     height: 200px;
     width: 90%;

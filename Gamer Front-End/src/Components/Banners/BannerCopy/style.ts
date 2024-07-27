@@ -20,13 +20,31 @@ export const BannerCopyStyle = styled(motion.section)`
     flex-direction: row;
   }
 `;
-
+//animar isso aqui
 export const CardPersonagemStyle = styled(motion.article)`
   height: max-content;
   cursor: pointer;
   user-select: none;
   width: 100%;
   position: relative;
+
+  @keyframes Animation {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+  &:hover {
+    animation-name: Animation;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 
   @media screen and (min-width: 1200px) {
     width: max-content;

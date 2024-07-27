@@ -43,32 +43,57 @@ const FooterLinksUteis = () => {
         <LiLinksUteis>
           <LinkUtilItem onClick={navegarAoTopo} to={"/"}>
             <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-            <Paragraph fontSize="16px" text="Início" />
+            <Paragraph
+              fontFamily={Theme.fonts.titilliumWeb}
+              fontWeight="800"
+              fontSize="16px"
+              text="Início"
+            />
           </LinkUtilItem>
         </LiLinksUteis>
 
         <LiLinksUteis>
           <LinkUtilItem to={"/Jogadores"}>
             <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-            <Paragraph fontSize="16px" text="Jogadores" />
+            <Paragraph
+              fontFamily={Theme.fonts.titilliumWeb}
+              fontWeight="800"
+              fontSize="16px"
+              text="Jogadores"
+            />
           </LinkUtilItem>
         </LiLinksUteis>
         <LiLinksUteis>
           <LinkUtilItem onClick={navegarANoticias} to={"/"}>
             <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-            <Paragraph fontSize="16px" text="Notícias" />
+            <Paragraph
+              fontFamily={Theme.fonts.titilliumWeb}
+              fontWeight="800"
+              fontSize="16px"
+              text="Notícias"
+            />
           </LinkUtilItem>
         </LiLinksUteis>
         <LiLinksUteis>
           <LinkUtilItem to={"/Login"}>
             <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-            <Paragraph fontSize="16px" text="Login" />
+            <Paragraph
+              fontFamily={Theme.fonts.titilliumWeb}
+              fontWeight="800"
+              fontSize="16px"
+              text="Login"
+            />
           </LinkUtilItem>
         </LiLinksUteis>
         <LiLinksUteis>
           <LinkUtilItem to={"/Equipes"}>
             <Line height="2px" width="15px" backgroundColor={secondaryColor} />
-            <Paragraph fontSize="16px" text="Equipes" />
+            <Paragraph
+              fontFamily={Theme.fonts.titilliumWeb}
+              fontWeight="800"
+              fontSize="16px"
+              text="Equipes"
+            />
           </LinkUtilItem>
         </LiLinksUteis>
       </LinksUteisContent>

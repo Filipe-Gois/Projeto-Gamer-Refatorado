@@ -22,17 +22,50 @@ const FooterContatos = () => {
 
       <FooterContatosContent>
         <ParagraphContent>
-          <Paragraph text="Localização:" textColor={secondaryColor} />
-          <Paragraph text="Rua Niterói, 180 - São Caetano do Sul- SP" />
+          <Paragraph
+            fontFamily={Theme.fonts.titilliumWeb}
+            fontWeight="800"
+            fontSize="16px"
+            text="Localização:"
+            textColor={secondaryColor}
+          />
+          <Paragraph
+            fontFamily={Theme.fonts.titilliumWeb}
+            fontWeight="800"
+            fontSize="16px"
+            text="Rua Niterói, 180 - São Caetano do Sul- SP"
+          />
         </ParagraphContent>
 
         <ParagraphContent>
-          <Paragraph text="Junte-se a nós:" textColor={secondaryColor} />
-          <Paragraph text="contato@gamer.com.br " />
+          <Paragraph
+            fontFamily={Theme.fonts.titilliumWeb}
+            fontWeight="800"
+            fontSize="16px"
+            text="Junte-se a nós:"
+            textColor={secondaryColor}
+          />
+          <Paragraph
+            fontFamily={Theme.fonts.titilliumWeb}
+            fontWeight="800"
+            fontSize="16px"
+            text="contato@gamer.com.br "
+          />
         </ParagraphContent>
         <ParagraphContent>
-          <Paragraph text="Junte-se a nós:" textColor={secondaryColor} />
-          <Paragraph text="(11) 0900-1010" />
+          <Paragraph
+            fontFamily={Theme.fonts.titilliumWeb}
+            fontWeight="800"
+            fontSize="16px"
+            text="Junte-se a nós:"
+            textColor={secondaryColor}
+          />
+          <Paragraph
+            fontFamily={Theme.fonts.titilliumWeb}
+            fontWeight="800"
+            fontSize="16px"
+            text="(11) 0900-1010"
+          />
         </ParagraphContent>
       </FooterContatosContent>
     </FooterContatosStyle>

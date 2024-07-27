@@ -7,7 +7,12 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  @font-face {
+  ::selection {
+    background-color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.secondary};
+  }
+
+  /* @font-face {
     font-family: "Inter";
     src: url("../assets/fonts/Inter/static/Inter-Regular.ttf");
     font-weight: 400;
@@ -33,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
     src: url("../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
     font-weight: 400;
     font-style: normal;
-  }
+  } */
 
   body {
     font-family: 'Inter', sans-serif;

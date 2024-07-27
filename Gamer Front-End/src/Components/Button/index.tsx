@@ -4,7 +4,7 @@ type ButtonProps = {
   text: string;
   textColor?: string;
   backgroundColor?: string;
-  onClick?(): void;
+  onClick?: () => void;
   fontSize?: string;
   width?: string;
   height?: string;

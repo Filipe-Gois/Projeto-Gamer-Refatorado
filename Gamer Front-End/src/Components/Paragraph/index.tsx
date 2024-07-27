@@ -5,6 +5,8 @@ type ParagraphProps = {
   textColor?: string;
   textAlign?: string;
   fontSize?: string;
+  fontFamily?: string;
+  fontWeight?: string;
 };
 
 const Paragraph = ({
@@ -12,9 +14,13 @@ const Paragraph = ({
   textColor,
   textAlign,
   fontSize,
+  fontFamily,
+  fontWeight,
 }: ParagraphProps) => {
   return (
     <ParagraphStyle
+      $fontWeight={fontWeight}
+      $fontFamily={fontFamily}
       $fontSize={fontSize}
       $textAlign={textAlign}
       $textColor={textColor}

@@ -69,7 +69,7 @@ const CardNoticia = ({
       <NoticiaContentText>
         <SectionTitle text={title} />
 
-        <Paragraph text={description} />
+        <Paragraph textAlign="justify" fontSize="16px" text={description} />
       </NoticiaContentText>
     </CardNoticiaStyle>
   );

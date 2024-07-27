@@ -76,8 +76,8 @@ const BannerNoticias = () => {
 
           <NoticiasBox>
             <Slider settings={settingsSlides}>
-              {noticias.map((noticia) => {
-                return <Slide id={Math.random().toString()}>{noticia}</Slide>;
+              {noticias.map((noticia, index) => {
+                return <Slide key={index.toString()}>{noticia}</Slide>;
               })}
             </Slider>
           </NoticiasBox>

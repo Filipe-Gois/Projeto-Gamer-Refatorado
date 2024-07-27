@@ -15,4 +15,7 @@ export const FormStyle = styled.form<FormProps>`
   justify-content: ${(props) => props.$justifyContent || "flex-start"};
   align-items: ${(props) => props.$alignItems || "center"};
   margin: ${(props) => props.$margin || "0"};
+  font-family: ${(props) => props.theme.fonts.titilliumWeb};
+  font-weight: 400;
+  font-size: 16px;
 `;

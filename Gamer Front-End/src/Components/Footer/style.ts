@@ -34,13 +34,12 @@ export const FooterRow1 = styled.div`
   }
   @media screen and (min-width: 1200px) {
     width: 50%;
+
+    max-height: 307px;
   }
 `;
 export const FooterRow2 = styled(FooterRow1)`
   /* position: static; */
-  @media screen and (min-width: 1200px) {
-    max-height: 307px;
-  }
 `;
 
 export const ContainerFooter = styled(Container)`
@@ -52,6 +51,9 @@ export const ContainerFooter = styled(Container)`
 
 export const CopyRyghtText = styled(ParagraphStyle)`
   margin-bottom: 40px;
+  font-family: ${(props) => props.theme.fonts.titilliumWeb};
+  font-weight: 400;
+  font-size: 16px;
   @media screen and (min-width: 768px) {
   }
   @media screen and (min-width: 1200px) {

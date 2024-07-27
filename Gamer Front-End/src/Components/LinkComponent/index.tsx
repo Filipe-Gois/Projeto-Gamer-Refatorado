@@ -6,7 +6,7 @@ type LinkProps = {
   width?: string;
   height?: string;
   children: ReactNode;
-  onClick?(): void;
+  onClick?: () => void;
 };
 
 const LinkComponent = ({

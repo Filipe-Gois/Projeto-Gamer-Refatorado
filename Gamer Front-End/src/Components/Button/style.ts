@@ -19,6 +19,25 @@ export const ButtonStyle = styled.button<ButtonProps>`
   color: ${(props) => props.$textColor || props.theme.colors.primary};
   font-size: ${(props) => props.$fontSize || "24px"};
   cursor: pointer;
+  font-family: ${(props) => props.theme.fonts.titilliumWeb};
+  font-weight: 700;
+  @keyframes Animation {
+    0% {
+      transform: scale(1);
+    }
+
+    100% {
+      transform: scale(1.05);
+    }
+  }
+
+  &:hover {
+    animation-name: Animation;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
 `;
 
 export const ButtonTrapezioStyle = styled(ButtonStyle)`
