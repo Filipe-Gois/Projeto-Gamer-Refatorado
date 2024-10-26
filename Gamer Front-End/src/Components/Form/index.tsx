@@ -3,7 +3,7 @@ import { FormStyle, FormStyleLogin } from "./style";
 import { Theme } from "../../Styles/Theme";
 import { TitleLogin } from "../Title";
 import ButtonComponent from "../Button";
-import { InputBox, InputPassword } from "../Input";
+import InputComponent, { InputBox, InputPassword } from "../Input";
 
 type FormProps = FormHTMLAttributes<HTMLFormElement> & {
   children?: ReactNode;
@@ -47,10 +47,10 @@ const FormLogin = ({ ...rest }: FormProps) => {
       />
 
       <InputBox>
-        <InputPassword />
-        <InputPassword />
+        <InputComponent placeholder="Digite seu Email:" />
+        <InputPassword placeholder="Digite sua senha:" />
       </InputBox>
-      <ButtonComponent margin="60px 0 0 0" width="100%" text="Logar" />
+      <ButtonComponent widthResponsivo="200px" width="100%" text="Logar" />
     </FormStyleLogin>
   );
 };

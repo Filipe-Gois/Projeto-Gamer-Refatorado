@@ -9,6 +9,7 @@ type ButtonProps = {
   width?: string;
   height?: string;
   margin?: string;
+  widthResponsivo?: string;
 };
 
 const ButtonComponent = ({
@@ -20,6 +21,7 @@ const ButtonComponent = ({
   width,
   height,
   margin,
+  widthResponsivo,
 }: ButtonProps) => {
   return (
     <ButtonStyle
@@ -29,6 +31,7 @@ const ButtonComponent = ({
       $fontSize={fontSize}
       $backgroundColor={backgroundColor}
       $textColor={textColor}
+      $widthResponsivo={widthResponsivo}
       onClick={onClick}
     >
       {text}

@@ -23,6 +23,7 @@ export const FormStyle = styled.form<FormProps>`
 export const FormStyleLogin = styled(FormStyle)`
   width: 100%;
   height: 61%;
+  justify-content: space-evenly;
   padding: 5% 7%;
   border-radius: 8px;
   background-image: linear-gradient(

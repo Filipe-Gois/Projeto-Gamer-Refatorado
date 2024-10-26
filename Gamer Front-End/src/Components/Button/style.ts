@@ -7,10 +7,11 @@ type ButtonProps = {
   $width?: string;
   $height?: string;
   $margin?: string;
+  $widthResponsivo?: string;
 };
 
 export const ButtonStyle = styled.button<ButtonProps>`
-  margin: ${(props) => props.$margin || "auto"};
+  margin: ${(props) => props.$margin || "0"};
   background-color: ${(props) =>
     props.$backgroundColor || props.theme.colors.secondary};
   border-radius: 10px;
@@ -23,6 +24,11 @@ export const ButtonStyle = styled.button<ButtonProps>`
   cursor: pointer;
   font-family: ${(props) => props.theme.fonts.titilliumWeb};
   font-weight: 700;
+
+  @media screen and (min-width: 768px) {
+    width: ${(props) => props.$widthResponsivo || "100%"};
+  }
+
   @keyframes Animation {
     0% {
       transform: scale(1);
